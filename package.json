@@ -1,0 +1,45 @@
+{
+  "name": "test-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "ava": "./node_modules/.bin/ava ./integration/novajus/contactsSpec.js --timeout=4m",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.sami.int.thomsonreuters.com/amazonia/test-poc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "axios": "^0.12.0",
+    "bluebird": "^3.4.1",
+    "casper": "^0.1.1",
+    "casperjs": "^1.1.2",
+    "chai": "^3.5.0",
+    "colors": "^1.1.2",
+    "mocha": "^2.5.3",
+    "mochawesome": "^1.3.5",
+    "node-horseman": "^3.1.1",
+    "node-uuid": "^1.4.7",
+    "should": "^9.0.2",
+    "zombie": "^4.2.1"
+  },
+  "ava": {
+    "files": [
+      "./test/integration/novajus/*.js",
+      "!**/config.js"
+    ],
+    "concurrency": 20,
+    "failFast": false,
+    "tap": false,
+    "verbose": true,
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  }
+}
