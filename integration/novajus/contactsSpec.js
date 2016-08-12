@@ -12,7 +12,8 @@ test('Should add a contact', () => {
         .moduleSave(contactData.pessoa)
         .moduleGoto('Processos')
         .moduleGotoNewForm('Processos')
-        .screenshot('novoProcesso.png');
+        .screenshot('novoProcesso.png')
+        .moduleSave(contactData.processo);
         // .saveMatter()
         // .title().then(title => {
         //     title.should.be.exactly('Pesquisa de processos/recursos/incidentes - Novajus');

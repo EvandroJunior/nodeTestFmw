@@ -40,7 +40,33 @@ module.exports = {
                 Name: 'Responsavel_PosicaoEnvolvidoText',
                 Value: 'Responsável',
                 ClearBefore: true
-            }                                          
+            },
+            {
+                GrupoN : {
+                    Link: 'add_outro_envolvido',
+                    
+                    Data: [
+                        {
+                            Type: 'select',
+                            Name: 'SituacaoEnvolvidoId',
+                            Value: 4
+                        },
+                        {
+                            Type: 'lookup',
+                            Name: 'PosicaoEnvolvidoText',
+                            Value: 'Contador'
+                        },
+                        {
+                            Type: 'lookup',
+                            Name: 'EnvolvidoText',
+                            Value: 'colucci08'
+                        }                        
+
+                    ]
+
+                }
+            }
+                                                     
             
         ]
     }    
